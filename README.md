@@ -1,4 +1,4 @@
-ProjetPhp
-=========
+ReviseTesMaths
+==============
 
-php ta mère ça me saoule
+Projet PHP d'application web mathématique pour les enfants

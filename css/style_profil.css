@@ -1,0 +1,58 @@
+#profil_box{
+	width: 980px;
+	min-height: 300px;
+	border: 1px solid silver;
+	padding-left: 20px;
+	position: relative;
+}
+
+#main_box{
+	width: 800px;
+	position: relative;
+	height: 230px;
+	margin-bottom: 50px;
+}
+
+#infos_box{
+	position: absolute;
+	top: 0;
+	right: 100px;
+	width: 380px;
+	height: 230px;
+}
+
+#profil_pic{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 210px;
+	height: 210px;
+}
+
+h2{
+	font-size: 24px;
+	font-weight: normal;
+	color: #63b4fb;
+}
+
+.infos_box_label{
+	display: inline-block;
+	min-width: 150px;
+	color: #63b4fb;
+}
+
+#update_button{
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	min-width: 200px;
+	height: 40px;
+	background-color: #63b4fb;
+	border: 0;
+	color: white;
+	font-size: 15px;
+}
+
+#update_button:hover{
+	background-color: #637efb
+}
