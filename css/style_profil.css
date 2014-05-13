@@ -56,3 +56,44 @@ h2{
 #update_button:hover{
 	background-color: #637efb
 }
+
+#old_password, #new_password{
+	width: 250px;
+	height: 35px;
+	border: 1px solid #bababa;
+	padding-left: 5px;
+	margin-top: 8px;
+	font-size: 14px;
+	color: black
+}
+
+#new_password:focus, #old_password{
+	border: 1px solid #63b4fb;
+}
+
+#submit{
+	width: 255px;
+	height: 40px;
+	border: 0;
+	background-color: #63b4fb;
+	color: white;
+	margin-top: 18px;
+	font-size: 17px
+}
+
+#submit:hover{
+	background-color: #63cdfb
+}
+
+input:focus {
+	outline-style: none;
+}
+
+#form_update{
+	text-align: center;
+	width: 100%;
+}
+
+h3{
+	text-align: center;
+}
