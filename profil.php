@@ -14,7 +14,7 @@
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="css/style.css" type ="text/css" />
 		<link rel="stylesheet" href="css/style_profil.css" type ="text/css" />
-		<title>Révise tes maths</title>
+		<title>Profil</title>
 	</head>
 	<body>
 		<?php include('includes/header.php'); ?>

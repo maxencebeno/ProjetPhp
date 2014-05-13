@@ -74,68 +74,68 @@
 																
 																else
 																{
-																	$erreur_register = 'Erreur: l\'adresse mail "'.$_POST['mail'].'" est déjà utilisée ! Choisis-en une autre.';
+																	$erreur_register = 'Erreur: l\'adresse mail "'.$_POST['mail'].'" est déjà utilisée ! Choisissez-en une autre.';
 																}
 														}
 														else
 														{
-															$erreur_register = 'Erreur: le pseudo "'.$_POST['pseudo'].'" est déjà utilisé ! Choisis-en un autre.';
+															$erreur_register = 'Erreur: le pseudo "'.$_POST['pseudo'].'" est déjà utilisé ! Choisissez-en un autre.';
 														}
 													}
 													else
 													{
-														$erreur_register = 'Erreur: tu dois accepter nos conditions d\'utilisation !'; 
+														$erreur_register = 'Erreur: vous devez accepter nos conditions d\'utilisation !'; 
 													}
 												}
 												else
 												{
-													$erreur_register = 'Erreur: ton mot de passe doit contenir au moins une lettre minuscule et un chiffre !';
+													$erreur_register = 'Erreur: votre mot de passe doit contenir au moins une lettre minuscule et un chiffre !';
 												}
 											}
 											else
 											{
-												$erreur_register = 'Erreur: ton mot de passe doit faire entre 8 et 40 caractères !';
+												$erreur_register = 'Erreur: votre mot de passe doit faire entre 8 et 40 caractères !';
 											}
 										}
 										else
 										{
-											$erreur_register = 'Erreur: ton mot de passe ne doit pas contenir d\'espaces !';
+											$erreur_register = 'Erreur: votre mot de passe ne doit pas contenir d\'espaces !';
 										}
 									}
 									else
 									{
-										$erreur_register = 'Erreur: tu as oublié d\'indiquer ton mot de passe !'; 
+										$erreur_register = 'Erreur: vous avez oublié d\'indiquer votre mot de passe !'; 
 									}
 								}
 								else
 								{
-									$erreur_register = 'Erreur: ton adresse mail est incorrecte !'; 
+									$erreur_register = 'Erreur: votre adresse mail est incorrecte !'; 
 								}
 							}
 							else
 							{
-								 $erreur_register = 'Erreur: tu as oublié d\'indiquer ton mail !';
+								 $erreur_register = 'Erreur: vous avez oublié d\'indiquer votre mail !';
 							}
 						}
 						else
 						{
-							$erreur_register = 'Erreur: ton nom doit faire entre 2 et 30 caractères !';
+							$erreur_register = 'Erreur: votre nom doit faire entre 2 et 30 caractères !';
 						}
 					}
 					else
 					{
-						$erreur_register = 'Erreur: ton prénom doit faire entre 2 et 30 caractères !';
+						$erreur_register = 'Erreur: votre prénom doit faire entre 2 et 30 caractères !';
 					}
 				}
 				else
 				{
-					$erreur_register = 'Erreur: ton pseudo doit faire entre 2 et 30 caractères !';
+					$erreur_register = 'Erreur: votre pseudo doit faire entre 2 et 30 caractères !';
 				}
 			
 			}
 			else
 			{
-				$erreur_register = 'Erreur: tu as oublié d\'indiquer ton pseudo, ton prénom ou ton nom !';
+				$erreur_register = 'Erreur: vous avez oublié d\'indiquer votre pseudo, votre prénom ou votre nom !';
 			}
 
 		}else{
@@ -144,7 +144,7 @@
 	}
 	else if(isset($_SESSION['ID']) AND isset($_POST['password']))
 	{
-		$erreur_register = 'Erreur lors de la tentative d\'inscription: tu es déjà connecté(e) !';
+		$erreur_register = 'Erreur lors de la tentative d\'inscription: vous êtes déjà connecté(e) !';
 	}
 ?>
 <!DOCTYPE html>
@@ -177,7 +177,7 @@
 			<?php
 			}
 			else{
-				echo '<p style="color: green">Bravo tu es inscrit '.$_POST['prenom'].' ! Tu peux cliquer <a href="index.php">ici</a> pour te connecter.</p>';
+				echo '<p style="color: green">Bravo vous êtes inscrit '.$_POST['prenom'].' ! Tu peux cliquer <a href="index.php">ici</a> pour te connecter.</p>';
 			}
 			?>
 			

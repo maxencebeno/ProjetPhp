@@ -68,7 +68,7 @@
 		</header>
 		
 		<div id="wrapper">
-			<p id="p_erreur">Tu t'es trompé de pseudo ou de mot de passe. Essaie à nouveau !</p>
+			<p id="p_erreur">Vous vous êtes trompé de pseudo ou de mot de passe. Essayez à nouveau !</p>
 		
 			<h1>Se connecter</h1>
 			<form method="POST" action="#" id="form_login2">
