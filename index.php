@@ -19,12 +19,9 @@
 	<body onload="document.getElementById('pseudo_login').focus();">
 		<?php include('includes/header.php'); ?>
 		<div id="wrapper">
-			<h1>Révise tes maths !</h1>
+			<h1>MEGACINE</h1>
 			<article>
-				<p>Marre des mauvaises notes en maths à cause d'erreurs en calculs mentaux? Révise tes maths vient à ton secours!</p>
-				<p>Notre site te permet de réviser de façon ludique tes tables de multiplications. Nous proposons de jouer seul ou avec des amis sur une interface simple et facile à comprendre.</p>
-				<p>Différents niveaux existent dans Révise tes maths. Du plus simple au plus corsé pour devenir incollable sur les tables de multiplication!</p>
-				<p>Notre particularité est l'esprit de compétition pour stimuler les enfants. Un classement est disponible pour te situer par rapport à tes amis.</p>
+				<p>Bienvenue sur le concurrent d'Allociné. Trouver un film, lisez sa critique et donnez-nous votre avis !</p>
 				<p id="p_account"><a href="create-account.php"><button>Commencer</button></a></p>
 			<article>
 		</div>
