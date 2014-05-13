@@ -12,6 +12,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="css/style.css" type ="text/css" />
+		<link rel="stylesheet" href="css/style_details.css" type ="text/css" />
 		<title>MEGACINE</title>
 	</head>
 	<body>
@@ -63,10 +64,21 @@
 			</form>
 
 		<h1> Laisser un commentaire </h1>
-			<form method="post" action="librairies/templates/template_comment.php">
+			<form method="post" action=<?php echo 'librairies/templates/template_comment.php?id='.$id_film.''; ?> >
 				<textarea type="text" name="message" placeholder="Votre message..." rows="10" cols="50" required></textarea>
 				<input type="submit" name="envoyer" value="Envoyer"> 
 			</form>
+		<?php
+			$req = $bdd->prepare('SELECT * FROM Comment WHERE MovieID = ?');
+			$req->execute(array($id_film));
+
+			while($comment = $req->fetch()) {
+				echo '<div class="comment"> 
+				<p>'.$comment['prenom_user'].' '.$comment['nom_user'].'</p>
+				<p>'.$comment['message'].'</p> </div>';
+			}
+			$req->closeCursor();
+		?>
 
 
 		<h2>Casting du film : </h2>

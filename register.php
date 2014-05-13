@@ -64,12 +64,6 @@
 																	$req->execute(array($_POST["pseudo"], sha1($_POST['password']), $_POST["mail"], $_POST["nom"], $_POST["prenom"], $date));
 
 																	$req->closeCursor(); // Ferme la requête
-
-																	// On prépare la table classement
-																	$req = $bdd->prepare("INSERT INTO Classement (id_classement, id_user, pseudo_user, best_score_user, niveau_classement) VALUES ('', '0', ?, '0', '0')");
-																	$req->execute(array($_POST["pseudo"]));
-
-																	$req->closeCursor(); // Ferme la requête
 																}
 																
 																else

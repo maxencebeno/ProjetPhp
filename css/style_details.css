@@ -1,0 +1,17 @@
+.comment {
+	border: 1px solid silver;
+}
+
+.comment p:first-child {
+	font-weight: bold;
+	color: black;
+}
+
+.comment p:last-child {
+	border-top: 1px solid silver;
+	text-align: center;
+}
+
+.comment p {
+	padding: 20px;
+}
