@@ -54,7 +54,6 @@
 				else {
 					header("Location: details.php?id=".$id_film."");
 				}
-				echo $message;
 			}
 		?>	
 
@@ -65,8 +64,8 @@
 
 		<h1> Laisser un commentaire </h1>
 			<form method="post" action="template_comment">
-				<input type="text" name="nom" placeholder="Votre nom" required>
-				<textarea type="text" name="message" placeholder="Votre message..." required></textarea> 
+				<textarea type="text" name="message" placeholder="Votre message..." rows="10" cols="50" required></textarea>
+				<input type="submit" name="envoyer" value="Envoyer"> 
 			</form>
 
 
