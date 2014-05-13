@@ -1,0 +1,12 @@
+.search_films{
+	border: 1px solid silver;
+	width: 500px;
+	padding: 20px;
+	margin-bottom: 40px;
+}
+
+.title_film{
+	display: inline-block;
+	width: 60px;
+	font-weight: bold;
+}

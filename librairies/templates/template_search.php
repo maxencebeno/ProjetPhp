@@ -5,10 +5,13 @@ if(strlen($_POST['query']) >= 2 AND strlen($_POST['query']) <= 40){
 	$req = $bdd->prepare('SELECT * FROM Movie WHERE Titre LIKE "%'.$query.'%" ORDER BY Titre ');
 	$req->execute(array($query));
 	while($donnees = $req->fetch()){
-		echo '<p><strong>Titre</strong>: '.$donnees['Titre'].'<br />';
-		echo '<strong>Année</strong>: '.$donnees['Année'].'<br />';
-		echo '<strong>Score</strong>: '.$donnees['Score'].'<br />';
-		echo '<strong>Vote</strong>: '.$donnees['Votes'].'<br /></p>';
+		echo '<div class="search_films">
+		<p><span class="title_film">Titre</span>: '.$donnees['Titre'].'<br />
+		<span class="title_film">Année</span>: '.$donnees['Année'].'<br />
+		<span class="title_film">Score</span>: '.$donnees['Score'].'<br />
+		<span class="title_film">Vote</span>: '.$donnees['Votes'].'<br />
+		<a href="details.php?id='.$donnees['MovieID'].'">Détails sur le film</a></p>
+		</div>';
 	}
 
 	if($donnees == NULL){

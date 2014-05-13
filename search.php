@@ -12,7 +12,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="css/style.css" type ="text/css" />
-		<link rel="stylesheet" href="css/style_play.css" type ="text/css" />
+		<link rel="stylesheet" href="css/style_search.css" type ="text/css" />
 		<title>MEGACINE</title>
 	</head>
 	<body onload="document.getElementById('query').focus();">
