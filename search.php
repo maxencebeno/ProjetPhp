@@ -3,8 +3,6 @@
 	require_once('includes/db_connect.php');
 	$bdd = connect_db();	
 	require_once('includes/auto_login.php');
-	require('librairies/templates/insert.php');
-	require('librairies/templates/template_classement.php');
 	if(!isset($_SESSION['estConnecte'])){
 		header('Location: index.php');
 	}
