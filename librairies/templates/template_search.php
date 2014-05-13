@@ -1,5 +1,6 @@
 <?php
 $query = htmlspecialchars($_GET['q']);
+$query = trim($query, " \t.");
 echo '<h1>Recherche de films</h1>';
 echo '<form method="GET" action="search.php" id="form_query2">
 		<input type="text" name="q" id="query2" minlength="2" maxlength="40" autocomplete="off" value="'.$query.'"/>
