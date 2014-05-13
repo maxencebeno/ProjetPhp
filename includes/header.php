@@ -9,8 +9,7 @@
 			<li><a href="index.php">Accueil</a></li>
 			<?php 
 			if(isset($_SESSION['estConnecte']) AND ($_SESSION['estConnecte'] == true)) {
-				echo '<li><a href="play.php">Révise tes maths !</a></li>';
-				echo '<li><a href="scores.php">Mes Scores</a></li>';
+				echo '<li><a href="search.php">Rechercher un film</a></li>';
 				echo '<li><a href="profil.php">Mon profil</a></li>';
 				echo '<li style="float: right"><a href="logout.php">Déconnexion</a></li>';
 			}else{
