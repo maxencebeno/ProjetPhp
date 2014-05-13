@@ -8,12 +8,13 @@ echo '<form method="GET" action="search.php" id="form_query2">
 if(strlen($query) > 0){
 	$resultat_vide = true;
 	// On analyse la requête: si elle comporte plusieurs mots, elle nécessite un traitement pour séparer les mots afin d'avoir une recherche plus précise !
+	$query=preg_replace('/\s\s+/', ' ', $query); 
 	$tableau_mots_cles = explode(' ' , $query);
 	$nb_elem=count($tableau_mots_cles); 
 
 	// On va incrémenter une requête sous forme de chaine de cractère pour incrémenter avec tous les mots clés
 	$requete = 'SELECT * FROM Movie WHERE Titre LIKE "%'.$tableau_mots_cles[0].'%" ';
-	for($i=1 ; $i<$nb_elem; $i++) { 
+	for($i=1 ; $i<$nb_elem; $i++) {
 		$requete.='OR (Titre LIKE "%'.$tableau_mots_cles[$i].'%")';
 	} 
 	$requete .= 'ORDER BY Titre';
