@@ -21,7 +21,7 @@
 			<?php 
 				if(!isset($_GET['q'])){
 			?>
-			<form method="GET" action="search.php" id="form_query">
+			<form method="GET" action="search" id="form_query">
 				<h1>Rechercher un film</h1>
 				<input type="text" name="q" id="query" minlength="2" maxlength="40" autocomplete="off" /><br />
 				<input type="submit" value="Rechercher" id="submit"/>
