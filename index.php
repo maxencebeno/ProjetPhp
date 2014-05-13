@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Révise tes maths !</title>
+		<title>MEGACINE</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<meta charset="UTF-8">
 	</head>
