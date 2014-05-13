@@ -63,6 +63,12 @@
 				<input type="submit" value="Voter">
 			</form>
 
+		<h1> Laisser un commentaire </h1>
+			<form method="post" action="template_comment">
+				<input type="text" name="nom" placeholder="Votre nom" required>
+				<textarea type="text" name="message" placeholder="Votre message..." required></textarea> 
+			</form>
+
 
 		<h2>Casting du film : </h2>
 			<?php
