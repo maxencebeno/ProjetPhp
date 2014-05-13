@@ -18,14 +18,13 @@
 	<body onload="document.getElementById('query').focus();">
 		<?php include('includes/header.php'); ?>
 		<div id="wrapper">
-			<h1>Rechercher un film</h1>
 			<?php 
-				if(!isset($_POST['query'])){
+				if(!isset($_GET['q'])){
 			?>
-			<form method="POST" action="#">
-				<p>Entrez un mot clé dans notre moteur de recherche (2 à 40 caractères) : </p>
-				<input type="text" name="query" id="query" placeholder="Recherche..." minlength="2" maxlength="40" required />
-				<input type="submit" value="Rechercher"/>
+			<form method="GET" action="search.php" id="form_query">
+				<h1>Rechercher un film</h1>
+				<input type="text" name="q" id="query" minlength="2" maxlength="40" required autocomplete="off" /><br />
+				<input type="submit" value="Rechercher" id="submit"/>
 			</form>
 			<?php
 				}

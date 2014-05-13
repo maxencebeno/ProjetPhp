@@ -10,3 +10,51 @@
 	width: 60px;
 	font-weight: bold;
 }
+
+#query{
+	border: 1px solid #bababa;
+	width: 500px;
+	height: 30px;
+	padding-left: 10px;
+	font-size: 16px;
+}
+
+#query:focus{
+	border-color: #4285f4;
+}
+
+#form_query{
+	text-align: center;
+	margin-top: 200px;
+}
+
+#submit{
+	margin-top: 20px;
+	width: 150px;
+	height: 35px;
+	border: 1px solid #b2b2b2;
+	background-color: #f4f4f4;
+	font-weight: bold;
+	border-radius: 2px;
+	color: #5d2222
+}
+
+#submit:active, #submit:focus{
+	border-color: #4285f4;
+}
+
+#submit:hover{
+	box-shadow: 0px 1px 0px silver;
+	border-color: silver;
+}
+
+#no_result{
+	margin-top: 150px;
+	text-align: center;
+}
+
+.details_button{
+	float: right;
+	margin-top: 15px;
+	margin-bottom: 30px;
+}
