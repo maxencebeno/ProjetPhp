@@ -13,13 +13,27 @@
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="css/style.css" type ="text/css" />
 		<link rel="stylesheet" href="css/style_play.css" type ="text/css" />
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<title>MEGACINE</title>
 	</head>
-	<body onload="document.getElementById('answer').focus();">
+	<body onload="document.getElementById('query').focus();">
 		<?php include('includes/header.php'); ?>
 		<div id="wrapper">
 			<h1>Rechercher un film</h1>
+			<?php 
+				if(!isset($_POST['query'])){
+			?>
+			<form method="POST" action="#">
+				<p>Entrez un mot clé dans notre moteur de recherche (2 à 40 caractères) : </p>
+				<input type="text" name="query" id="query" placeholder="Recherche..." minlength="2" maxlength="40" required />
+				<input type="submit" value="Rechercher"/>
+			</form>
+			<?php
+				}
+				else{
+					// Si l'utilisateur a envoyé des données on délègue le traitement de la rechercher à la page incluse ci-dessous
+					include('librairies/templates/template_search.php');
+				}
+			?>
 		</div>
 		
 		
