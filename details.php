@@ -63,7 +63,7 @@
 			</form>
 
 		<h1> Laisser un commentaire </h1>
-			<form method="post" action="template_comment">
+			<form method="post" action="librairies/templates/template_comment.php">
 				<textarea type="text" name="message" placeholder="Votre message..." rows="10" cols="50" required></textarea>
 				<input type="submit" name="envoyer" value="Envoyer"> 
 			</form>
