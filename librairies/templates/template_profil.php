@@ -24,19 +24,19 @@
 								));
 								$succes_register = 'La modification a bien été prise en compte.';
 						}else{
-						$erreur_register = 'Erreur: ton ancien mot de passe n\'est pas celui-ci !';
+						$erreur_register = 'Erreur: votre ancien mot de passe n\'est pas celui-ci !';
 					}
 					}else{
-						$erreur_register = 'Erreur: ton mot de passe doit contenir au moins une lettre minuscule et un chiffre !';
+						$erreur_register = 'Erreur: votre mot de passe doit contenir au moins une lettre minuscule et un chiffre !';
 					}
 				}else{
-					$erreur_register = 'Erreur: ton mot de passe doit faire entre 8 et 40 caractères !';
+					$erreur_register = 'Erreur: votre mot de passe doit faire entre 8 et 40 caractères !';
 				}
 			}else{
-				$erreur_register = 'Erreur: ton mot de passe ne doit pas contenir d\'espaces !';
+				$erreur_register = 'Erreur: votre mot de passe ne doit pas contenir d\'espaces !';
 			}
 		}else{
-			$erreur_register = 'Erreur: tu dois indiquer ton mot de passe !';
+			$erreur_register = 'Erreur: vous devez indiquer votre mot de passe !';
 		}
 	}		
 ?> 
