@@ -1,5 +1,0 @@
-Bon alors j'ai fait énormément de modifications (rajouté des pages, fait les vérifications de l'inscription (c'est un coffre fort haha), modifié le fonctionnement du login etc etc) ! Je ne te les énumère pas toutes, je te laisse le soin de regarder les fichiers de code (que j'ai commentés) et teste bien tout ça en créant un compte, en faisant des erreurs exprès (1 seule lettre pour pseudo, adresse mail invalide, pseudo déjà utilisé etc) quand tu t'inscris pour pouvoir voir mon système de validation ;-) Ah oui ! J'ai fait un système pour pré-remplir les champs s'il y a une erreur lors de l'inscription comme ça l'utilisateur ne doit pas tout re-remplir ^^ Tu trouveras la fonction qui permet le remplissage dans les templates ;) 
-
-PS j'ai refait le login check ça haha !:p
-
-J'attends ton retour !
