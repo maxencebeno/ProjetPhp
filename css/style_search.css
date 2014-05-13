@@ -30,13 +30,14 @@
 
 #submit{
 	margin-top: 20px;
-	width: 150px;
-	height: 35px;
+	width: 120px;
+	height: 30px;
 	border: 1px solid #b2b2b2;
 	background-color: #f4f4f4;
 	font-weight: bold;
 	border-radius: 2px;
-	color: #5d2222
+	color: #5d2222;
+	font-size: 12px
 }
 
 #submit:active, #submit:focus{
@@ -56,7 +57,7 @@
 
 #submit2{
 	margin-top: 20px;
-	width: 150px;
+	width: 120px;
 	height: 35px;
 	border: 1px solid #b2b2b2;
 	background-color: #4485f3;
