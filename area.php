@@ -12,13 +12,13 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="css/style.css" type ="text/css" />
-		<title>Révise tes maths</title>
+		<title>MEGACINE</title>
 	</head>
 	<body>
 		<?php include('includes/header.php'); ?>
 		<div id="wrapper">
-			<h1>Tu es maintenant connecté(e) <?php echo $_SESSION['prenom'].' '. $_SESSION['nom']?> alias <?php echo $_SESSION['pseudo']?> !</h1>
-			<p>Cette page "area" sera l'espace principal du site non ?</p>
+			<h1><?php echo $_SESSION['prenom'].' '. $_SESSION['nom']?></h1>
+			<p>Cherchez un film dans notre base de données:</p>
 		</div>
 	</body>
 </html>

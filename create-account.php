@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Révise tes maths</title>
+		<title>MEGACINE</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="css/style.css" type="text/css" />
 		<link rel="stylesheet" href="css/style_create-account.css" type="text/css" />
@@ -20,8 +20,7 @@
 		<?php include('includes/header.php'); ?>
 		<div id="wrapper">
 			<div id="quote">
-				<p id="sentence">Ne vous inquiétez pas pour vos difficultés en mathématiques, les miennes sont encore plus grandes.</p>
-				<p id="author">Albert Einstein (1879-1955)</p>
+				<p id="sentence">Inscrivez-vous pour vivre le cinéma au plus près.</p>
 			</div>
 			<div id="register_box">
 				<h1>Créer un compte<h1>
