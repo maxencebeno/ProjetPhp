@@ -22,5 +22,5 @@ if(strlen($query) >= 2 AND strlen($query) <= 40){
 	}
 }
 else{
-	echo '<p>Erreur: Votre requête doit comporter entre 2 et 40 caractères.</p>';
+	echo '<p id="no_result">Erreur: Votre requête doit comporter entre 2 et 40 caractères. Veuillez <a href="search.php">réessayer</a></p>';
 }
