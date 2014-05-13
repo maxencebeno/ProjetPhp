@@ -1,10 +1,12 @@
 <?php
-
 $query = htmlspecialchars($_GET['q']);
-if(strlen($query) >= 1 AND strlen($query) <= 40){
+echo '<h1>Recherche de films</h1>';
+echo '<form method="GET" action="search.php" id="form_query2">
+		<input type="text" name="q" id="query2" minlength="2" maxlength="40" autocomplete="off" value="'.$query.'"/>
+		<input type="submit" value="Rechercher" id="submit2"/>
+	 </form>';
+if(strlen($query) > 0){
 	$resultat_vide = true;
-	echo '<h1>Résultats pour "'.$query.'"</h1>';
-
 	// On analyse la requête: si elle comporte plusieurs mots, elle nécessite un traitement pour séparer les mots afin d'avoir une recherche plus précise !
 	$tableau_mots_cles = explode(' ' , $query);
 	$nb_elem=count($tableau_mots_cles); 
@@ -32,9 +34,17 @@ if(strlen($query) >= 1 AND strlen($query) <= 40){
 	}
 	
 	if($resultat_vide){
-		echo '<p id="no_result">Votre recherche n\'a donné aucun résultat. Veuillez <a href="search.php">réessayer</a>.</p>';
+		echo '<div id="no_result">
+		<p>Aucun document ne correspond aux termes de recherche spécifiés (<strong>'.$query.'</strong>).<br /><br />
+		Suggestions :</p>
+		<ul>
+			<li>Le film que vous cherchez n\'existe pas dans notre base de données.</li>
+			<li>Vérifiez l’orthographe des termes de recherche.</li>
+			<li>Essayez d\'autres mots.</li>
+			<li>Utilisez des mots clés plus généraux.</li>
+		</ul>
+		</div>';
 	}
-}
-else{
-	echo '<p id="no_result">Erreur: Votre requête doit comporter entre 2 et 40 caractères. Veuillez <a href="search.php">réessayer</a></p>';
+}else{
+	echo '<p id="empty_query">Votre recherche semble être vide...</p>';
 }

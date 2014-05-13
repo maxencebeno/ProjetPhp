@@ -24,13 +24,13 @@
 			$req->execute(array($id_film));
 			$film = $req->fetch();
 		?>
-		<h1>Détails du film : <?php echo $film['Titre'];?></h1>
+		<h1>Détails du film : "<?php echo $film['Titre'];?>"</h1>
 
 		<h2>Informations sur le film : </h2>
 
 			<ul>
 				<?php
-					echo '<li>année de tournage : '.$film['Année'].'</li>
+					echo '<li>Année de tournage : '.$film['Année'].'</li>
 					<li>Score du film : '.$film['Score'].'</li>
 					<li>Nombre de votes : '.$film['Votes'].'</li>';
 				?>

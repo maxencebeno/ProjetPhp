@@ -48,13 +48,64 @@
 	border-color: silver;
 }
 
-#no_result{
-	margin-top: 150px;
-	text-align: center;
-}
-
 .details_button{
 	float: right;
 	margin-top: 15px;
 	margin-bottom: 30px;
 }
+
+#submit2{
+	margin-top: 20px;
+	width: 150px;
+	height: 35px;
+	border: 1px solid #b2b2b2;
+	background-color: #4485f3;
+	font-weight: bold;
+	border-radius: 2px;
+	color: #ffffff
+}
+
+#submit2:active, #submit2:focus{
+	border-color: #4285f4;
+}
+
+#submit2:hover{
+	box-shadow: 0px 0px 1px #4485f3;
+}
+
+#query2{
+	border: 1px solid #bababa;
+	width: 560px;
+	height: 30px;
+	padding-left: 10px;
+	font-size: 16px;
+}
+
+#query2:focus{
+	border-color: #4285f4;
+}
+
+#form_query2{
+	text-align: left;
+	margin-top: 30px;
+	margin-bottom: 80px
+}
+
+#empty_query{
+	font-size: 25px;
+	color: #bababa
+}
+
+#no_result{
+	font-size: 16px;
+	color: black
+}
+
+
+
+
+
+
+
+
+
