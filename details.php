@@ -49,13 +49,12 @@
 					$req = $bdd->query("UPDATE Movie set Votes = Votes + 1 where MovieID = ".$id_film."");
 					$reqAVote = $bdd->prepare("INSERT INTO Vote(id_user, MovieID) VALUES (?, ?)");
 					$reqAVote->execute(array($id_user, $id_film));
-					echo "Votre vote a bien été pris en compte";
 					header("Location: details.php?id=".$id_film."");
 				}
 				else {
-					echo "Vous avez déjà voté pour ce film";
 					header("Location: details.php?id=".$id_film."");
 				}
+				echo $message;
 			}
 		?>	
 
