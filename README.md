@@ -1,4 +1,4 @@
-ReviseTesMaths
+ProjetPhp
 ==============
 
-Projet PHP d'application web mathématique pour les enfants
+Projet PHP IUT
