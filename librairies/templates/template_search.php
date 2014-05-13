@@ -14,7 +14,7 @@ if(strlen($_POST['query']) >= 2 AND strlen($_POST['query']) <= 40){
 		</div>';
 	}
 
-	if($donnees == NULL){
+	if(count($donnees) == 0){
 		echo '<p>Votre recherche n\'a donné aucun résultat. Veuillez réessayer.</p>';
 	}
 
