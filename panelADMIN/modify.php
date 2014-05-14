@@ -28,7 +28,7 @@
 			
 		<?php
 			if(isset($_POST['changer_titre'])) {
-				?> <formmethod="post" action=<?php echo 'modify.php?id='.$id_film.''; ?> >
+				?> <form method="post" action=<?php echo 'librairies/templates/template_modify.php?id='.$id_film.'&amp;chgt=titre'; ?> >
 						<input type="text" name="titre" placeholder="Nouveau titre" required>
 						<input type="submit" value="Envoyer">
 					</form> 
@@ -50,13 +50,14 @@
 			
 		<?php
 			if(isset($_POST['changer_info'])) {
-				?> <form method="post" action=<?php echo 'modify.php?id='.$id_film.''; ?> >
-						<input type="text" name="annee" placeholder="Année" required>
-						<input type="text" name="score" placeholder="Score" required>
-						<input type="text" name="votes" placeholder="Votes" required>
+				?> <form method="post" action=<?php echo 'librairies/templates/template_modify.php?id='.$id_film.'&amp;chgt=info'; ?> >
+						<input type="text" name="annee" placeholder="Année">
+						<input type="text" name="score" placeholder="Score">
+						<input type="text" name="votes" placeholder="Votes">
 						<input type="submit" value="Envoyer">
 					</form> 
 				<?php
+				echo $_GET['message'];
 			}
 		?>
 
@@ -84,9 +85,8 @@
 				?>
 			 
 			</table>
-			<form method="post" action=<?php echo 'modify.php?id='.$id_film.''; ?> >
+			<form method="post" action=<?php echo 'librairies/templates/template_modify.php?id='.$id_film.''; ?> >
 			 	<input type="submit" value="Ajouter">
-				<input type="submit" value="Supprimer">
 			</form> 
 			<a id="detail" href="index.php">Retour à l'accueil</a>
 		</div>
