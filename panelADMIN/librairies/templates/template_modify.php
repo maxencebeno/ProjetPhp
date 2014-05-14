@@ -33,7 +33,6 @@
 			}
 			if(isset($_POST['score']) AND !empty($_POST['score'])) {
 				$score = htmlspecialchars($_POST['score']);
-				echo $score;
 				$req = $bdd->prepare("UPDATE Movie SET Score = :score WHERE MovieID = :id_film");
 				$req->execute(array(
 						'score' => $score,
