@@ -37,6 +37,7 @@
 			</ul>	
 		<h2>Voter pour ce film : </h2>
 		<?php
+			// Script qui prend en compte un éventuel vote
 			if(ISSET($_POST['nbVote'])) {
 				$ok = true;
 				$id_user = $_SESSION['id_user'];
@@ -58,15 +59,15 @@
 			}
 		?>	
 
-			<form method="post" action="">
+			<form method="post" action="" id="form_vote">
 				<input type="hidden" name="nbVote">
-				<input type="submit" value="Voter">
+				<input type="submit" value="Cliquer pour voter !" id="submit_vote">
 			</form>
 
 		<h1> Laisser un commentaire </h1>
 			<form method="post" action=<?php echo 'librairies/templates/template_comment.php?id='.$id_film.''; ?> >
-				<textarea type="text" name="message" placeholder="Votre message..." rows="10" cols="50" required></textarea>
-				<input type="submit" name="envoyer" value="Envoyer"> 
+				<textarea type="text" name="message" placeholder="Votre commentaire..." id="textarea_comment" maxlength="1000" required></textarea><br />
+				<input type="submit" name="envoyer" value="Envoyer" id="submit_comment"> 
 			</form>
 		<?php
 			$req = $bdd->prepare('SELECT * FROM Comment WHERE MovieID = ?');
@@ -74,8 +75,9 @@
 
 			while($comment = $req->fetch()) {
 				echo '<div class="comment"> 
-				<p>'.$comment['prenom_user'].' '.$comment['nom_user'].'</p>
-				<p>'.$comment['message'].'</p> </div>';
+					<div class="user_name"><strong>'.$comment['prenom_user'].' '.$comment['nom_user'].'</strong></div>
+					<div class="user_message">'.$comment['message'].'</div>
+				</div>';
 			}
 			$req->closeCursor();
 		?>
