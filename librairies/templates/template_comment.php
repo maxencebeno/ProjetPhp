@@ -16,7 +16,7 @@
 			$req->execute(array($id_user, $nom, $prenom, $message, $id_film));
 
 			$req->closeCursor();
-			header("Location: ../../details.php?id=".$_GET['id']."");
+			header("Location: ../../details.php?id=".$_GET['id']."#submit_comment");
 		}
 		else {
 			echo "Erreur : votre message est trop court, il doit comporter au moins 2 caractères";
