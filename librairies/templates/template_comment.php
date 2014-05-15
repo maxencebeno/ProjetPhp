@@ -19,7 +19,7 @@
 			header("Location: ../../details.php?id=".$_GET['id']."#submit_comment");
 		}
 		else {
-			echo "Erreur : votre message est trop court, il doit comporter au moins 2 caractères";
+			header("Location: ../../details.php?id=".$_GET['id'].""); // Message trop court on redirige
 		}
 	}
 	else {
