@@ -14,7 +14,7 @@
 	<body>
 		<?php include('includes/header_admin.php'); ?>
 		<div id="wrapper">
-<?php
+		<?php
 			$id_film = htmlspecialchars($_GET['id']);
 			$req = $bdd->prepare("select * from Movie where MovieID = ?");
 			$req->execute(array($id_film));
@@ -111,7 +111,6 @@
 				?>
 			 
 			</table>
-			<a id="detail" href="index.php">Retour à l'accueil</a>
 		</div>
 	</body>
 </html>

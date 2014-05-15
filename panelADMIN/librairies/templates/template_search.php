@@ -30,7 +30,7 @@ if(strlen($query) > 0){
 		<span class="title_film">Année</span>: '.$donnees['Année'].'<br />
 		<span class="title_film">Score</span>: '.$donnees['Score'].'<br />
 		<span class="title_film">Vote</span>: '.$donnees['Votes'].'<br />
-		<span class="details_button"><a href="details.php?id='.$donnees['MovieID'].'">Détails sur le film</a></span></p>
+		<span class="details_button"><a href="modify.php?id='.$donnees['MovieID'].'">Modifier le film</a></span></p>
 		</div>';
 		$resultat_vide = false; // On passe la variable à false pour ne pas afficher de message d'erreur car on a des résultats !
 	}
