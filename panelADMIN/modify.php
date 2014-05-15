@@ -62,6 +62,22 @@
 		?>
 
 		<h2>Casting du film : </h2>
+		<form method="post" action=<?php echo 'modify.php?id='.$id_film.''; ?> >
+				<input type="submit" name="ajout_acteur" value="Ajouter un acteur">
+		</form>
+			
+		<?php
+			if(isset($_POST['ajout_acteur'])) {
+		?>  
+		<form method="post" action=<?php echo 'librairies/templates/template_modify.php?id='.$id_film.'&amp;chgt=ajout'; ?> >
+			<input type="text" name="ordinal_acteur" placeholder="Ordinal" required>
+			<input type="text" name="nom_acteur" placeholder="Nom de l'acteur" required>
+			<input type="submit" value="Envoyer">
+		</form> 
+		<?php
+			}
+		?>
+
 			<?php
 					$req1 = $bdd->prepare("select * from Casting, Actor where MovieID = ".$id_film." AND Actor.ActorId = Casting.ActorId ORDER BY Ordinal");
 					$req1->execute(array($id_film));
@@ -77,14 +93,17 @@
 				while($cast = $req1->fetch()) {
 					echo ' 
 					<tr>
-						<td>'.$cast['Ordinal'].'</td> 
-						<td>'.$cast['Nom'].'
-							<form method="post" action="librairies/templates/template_modify.php?id='.$id_film.'&amp;id_acteur='.$cast['ActorId'].'&amp;chgt=acteur">
+						<td>'.$cast['Ordinal'].'
+						<form id="formulaire_casting" method="post" action="librairies/templates/template_modify.php?id='.$id_film.'&amp;id_acteur='.$cast['ActorId'].'&amp;chgt=acteur">
 								<input type="text" name="ordinal" placeholder="Ordinal">
-								<input type="text" name="nom" placeholder="Nom">
-								<input type="submit" value="Envoyer">
-								<a href="librairies/templates/template_modify.php?id='.$id_film.'&amp;id_acteur='.$cast['ActorId'].'&amp;chgt=suppression"><img id="suppr" src="../images/suppr.png"/></a>
-							</form>
+						</form>
+						</td> 
+						<td>'.$cast['Nom'].'
+						<a href="librairies/templates/template_modify.php?id='.$id_film.'&amp;id_acteur='.$cast['ActorId'].'&amp;chgt=suppression"><img id="suppr" src="../images/suppr.png"/></a>
+						<form id="formulaire_casting" method="post" action="librairies/templates/template_modify.php?id='.$id_film.'&amp;id_acteur='.$cast['ActorId'].'&amp;chgt=acteur">
+							<input type="text" name="nom" placeholder="Nom">
+							<input type="submit" value="Envoyer">
+						</form>
 						</td>
 					</tr>';
 				}
@@ -92,9 +111,6 @@
 				?>
 			 
 			</table>
-			<form method="post" action=<?php echo 'librairies/templates/template_modify.php?id='.$id_film.''; ?> >
-			 	<input type="submit" value="Ajouter">
-			</form> 
 			<a id="detail" href="index.php">Retour à l'accueil</a>
 		</div>
 	</body>
