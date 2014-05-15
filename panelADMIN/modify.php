@@ -8,7 +8,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="../css/style.css" type ="text/css" />
-		<link rel="stylesheet" href="../css/style_details.css" type ="text/css" />
+		<link rel="stylesheet" href="../css/style_modify.css" type ="text/css" />
 		<title>MEGACINE</title>
 	</head>
 	<body>
@@ -78,7 +78,14 @@
 					echo ' 
 					<tr>
 						<td>'.$cast['Ordinal'].'</td> 
-						<td>'.$cast['Nom'].'<form><input type="checkbox"></form></td>
+						<td>'.$cast['Nom'].'
+							<form method="post" action="librairies/templates/template_modify.php?id='.$id_film.'&amp;id_acteur='.$cast['ActorId'].'&amp;chgt=acteur">
+								<input type="text" name="ordinal" placeholder="Ordinal">
+								<input type="text" name="nom" placeholder="Nom">
+								<input type="submit" value="Envoyer">
+								<a href="librairies/templates/template_modify.php?id='.$id_film.'&amp;id_acteur='.$cast['ActorId'].'&amp;chgt=suppression"><img id="suppr" src="../images/suppr.png"/></a>
+							</form>
+						</td>
 					</tr>';
 				}
 				$req1->closeCursor();
