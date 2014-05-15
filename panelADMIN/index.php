@@ -20,14 +20,16 @@
 
 				<h1>Liste des films</h1>
 
-				<form method="post" action="index.php">
+				<p> Pour l'ajout d'un acteur : rendez-vous sur la page du film auquel il a participé. </p>
+
+				<form id="formulaire_film" method="post" action="index.php">
 					<input type="submit" name="ajout_film" value="Ajouter un film">
 				</form>
 			
 				<?php
 					if(isset($_POST['ajout_film'])) {
 				?>  
-				<form method="post" action=<?php echo 'librairies/templates/template_modify.php?chgt=ajout_film'; ?> >
+				<form id="formulaire_film" method="post" action="librairies/templates/template_movie.php?chgt=ajout_film">
 					<input type="text" name="titre_film" placeholder="Titre" required>
 					<input type="text" name="annee_film" placeholder="Année" required>
 					<input type="text" name="score_film" placeholder="Score" required>
@@ -55,7 +57,7 @@
 								<td>'.$film['Score'].'</td>
 								<td>'.$film['Votes'].'</td>	
 								<td><a id="detail" href="modify.php?id='.$film['MovieID'].'"> Cliquez pour modifier</a>
-									<a href="librairies/templates/template_modify.php?id='.$film['MovieID'].'&amp;chgt=suppression_film"><img id="suppr" src="../images/suppr.png"/></a>
+									<a href="librairies/templates/template_movie.php?id='.$film['MovieID'].'&amp;chgt=suppression_film"><img id="suppr" src="../images/suppr.png"/></a>
 								</td>
 							</tr>';
 					}

@@ -62,6 +62,7 @@
 
 			header('Location: ../../modify.php?id='.$id_film.'');
 		}
+		header('Location: ../../modify.php?id='.$id_film.'');
 
 	} else if($chgt == "acteur") {
 	 	$id_acteur = htmlspecialchars($_GET['id_acteur']);
@@ -91,6 +92,7 @@
 
 			header('Location: ../../modify.php?id='.$id_film.'');
 	 	}
+	 	header('Location: ../../modify.php?id='.$id_film.'');
 	 } else if($chgt == "suppression") {
 	 	$id_acteur = htmlspecialchars($_GET['id_acteur']);
 
@@ -119,6 +121,7 @@
 	 		$req->closeCursor();
 	 		header('Location: ../../modify.php?id='.$id_film.'');
 	 	}
+	 	header('Location: ../../modify.php?id='.$id_film.'');
 	 } else {
 	 	header('Location: ../../modify.php?id='.$id_film.'');
 	 }
