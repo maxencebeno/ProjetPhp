@@ -117,7 +117,6 @@
 	 		$req = $bdd->prepare('INSERT INTO Casting (MovieID, ActorId, Ordinal) VALUES (?, ?, ?)');
 	 		$req->execute(array($id_film, $nouvel_id_acteur, $ordinal_acteur));
 	 		$req->closeCursor();
-
 	 		header('Location: ../../modify.php?id='.$id_film.'');
 	 	}
 	 } else {

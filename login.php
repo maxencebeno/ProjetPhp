@@ -46,6 +46,7 @@
 			}
 		}
 		else{
+			$_SESSION['estConnecte'] = false;
 			header('Location: index.php');
 		}
 ?>

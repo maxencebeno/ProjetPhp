@@ -32,3 +32,8 @@ table a, table a:visited{
 table a:hover{
 	text-decoration: underline;
 }
+
+#suppr {
+	width: 15px;
+	height: 15px;
+}

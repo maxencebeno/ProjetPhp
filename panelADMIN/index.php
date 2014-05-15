@@ -20,6 +20,23 @@
 
 				<h1>Liste des films</h1>
 
+				<form method="post" action="index.php">
+					<input type="submit" name="ajout_film" value="Ajouter un film">
+				</form>
+			
+				<?php
+					if(isset($_POST['ajout_film'])) {
+				?>  
+				<form method="post" action=<?php echo 'librairies/templates/template_modify.php?chgt=ajout_film'; ?> >
+					<input type="text" name="titre_film" placeholder="Titre" required>
+					<input type="text" name="annee_film" placeholder="Année" required>
+					<input type="text" name="score_film" placeholder="Score" required>
+					<input type="submit" value="Envoyer">
+				</form> 
+				<?php
+					}
+				?>
+
 			<table id="table-films">
 				<tr>
 					<th>Titre</th> 
@@ -38,6 +55,8 @@
 								<td>'.$film['Score'].'</td>
 								<td>'.$film['Votes'].'</td>	
 								<td><a id="detail" href="modify.php?id='.$film['MovieID'].'"> Cliquez pour modifier</a>
+									<a href="librairies/templates/template_modify.php?id='.$film['MovieID'].'&amp;chgt=suppression_film"><img id="suppr" src="../images/suppr.png"/></a>
+								</td>
 							</tr>';
 					}
 					$req->closeCursor();

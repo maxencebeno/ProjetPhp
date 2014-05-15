@@ -46,7 +46,7 @@
 						<td>'.$film['Année'].'</td>
 						<td>'.$film['Score'].'</td>
 						<td>'.$film['Votes'].'</td>	
-						<td><a id="detail" href="details.php?id='.$film['MovieID'].'"> Cliquez pour les détails</a>
+						<td><a id="detail" href="details.php?id='.$film['MovieID'].'"> Cliquez pour les détails</a></td>
 					</tr>';
 			}
 			$req->closeCursor();
