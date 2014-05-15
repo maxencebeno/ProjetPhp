@@ -38,7 +38,7 @@
 				<th>Détails</th>
 			</tr>
 			<?php
-			$req = $bdd->query("select * from Movie");
+			$req = $bdd->query("select * from Movie ORDER BY Année");
 			while($film = $req->fetch()) {			
 				echo ' 
 					<tr>
