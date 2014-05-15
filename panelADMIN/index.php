@@ -28,6 +28,13 @@
       				<input type="submit" value="Envoyer"/>
     			</form>
 
+    			<?php
+    				if(!empty($_GET['message'])) {
+    					$message = htmlspecialchars($_GET['message']);
+    					echo $message;
+    				}
+    			?>
+
     			<p>Ou</p>
 
 				<form id="formulaire_film" method="post" action="index.php">

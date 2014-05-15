@@ -29,12 +29,12 @@
 		$req->execute(array($id_film));
 
 		while($donnees = $req->fetch()) {
-			$req1 = $bdd->prepare('DELETE FROM Casting WHERE MovieID = ?');
-			$req1->execute(array($id_film));
+			$req = $bdd->prepare('DELETE FROM Casting WHERE MovieID = ?');
+			$req->execute(array($id_film));
 		}
 
 		$req->closeCursor();
-		$req1->closeCursor();
+		$req->closeCursor();
 
 		header("Location: ../../index.php");
 	} else {

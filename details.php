@@ -45,16 +45,19 @@
 				$req->execute(array($id_film, $id_user));
 				if ($vote = $req->fetch()) {
 						$ok = false;
+						$message = "Vous avez déjà voté pour ce film";
 				}
 				$req->closeCursor();
 				if($ok == true) {
 					$req = $bdd->query("UPDATE Movie set Votes = Votes + 1 where MovieID = ".$id_film."");
 					$reqAVote = $bdd->prepare("INSERT INTO Vote(id_user, MovieID) VALUES (?, ?)");
 					$reqAVote->execute(array($id_user, $id_film));
-					header("Location: details.php?id=".$id_film."");
+					$message = "Votre vote a bien été pris en compte";
+					header("Location: details.php?id=".$id_film."&amp;message=".$message."");
 				}
 				else {
-					header("Location: details.php?id=".$id_film."");
+					$message = "Vous avez déjà voté pour ce film";
+					header("Location: details.php?id=".$id_film."&amp;message=".$message."");
 				}
 			}
 		?>	
@@ -63,6 +66,13 @@
 				<input type="hidden" name="nbVote">
 				<input type="submit" value="Cliquer pour voter !" id="submit_vote">
 			</form>
+
+			<?php
+				if(!empty($_GET['message'])) {
+					$message = htmlspecialchars($_GET['message']);
+					echo $message;
+				}
+			?>
 
 		<h1> Laisser un commentaire </h1>
 			<form method="post" action=<?php echo 'librairies/templates/template_comment.php?id='.$id_film.''; ?> >
