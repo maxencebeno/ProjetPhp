@@ -22,6 +22,14 @@
 
 				<p> Pour l'ajout d'un acteur : rendez-vous sur la page du film auquel il a participé. </p>
 
+				<form enctype="multipart/form-data" action="librairies/templates/template_fileupload.php" method="post">
+      				<input type="hidden" name="MAX_FILE_SIZE" value="100000" />
+      				Transfère le fichier <input type="file" name="monfichier" />
+      				<input type="submit" value="Envoyer"/>
+    			</form>
+
+    			<p>Ou</p>
+
 				<form id="formulaire_film" method="post" action="index.php">
 					<input type="submit" name="ajout_film" value="Ajouter un film">
 				</form>
