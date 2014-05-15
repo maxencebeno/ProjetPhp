@@ -70,7 +70,7 @@
 				<input type="submit" name="envoyer" value="Envoyer" id="submit_comment"> 
 			</form>
 		<?php
-			$req = $bdd->prepare('SELECT * FROM Comment WHERE MovieID = ?');
+			$req = $bdd->prepare('SELECT * FROM Comment WHERE MovieID = ? ORDER BY id_comment DESC');
 			$req->execute(array($id_film));
 
 			while($comment = $req->fetch()) {
