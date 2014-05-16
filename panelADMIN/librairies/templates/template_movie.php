@@ -1,6 +1,7 @@
 <?php
 	require_once('../../../includes/db_connect.php');
 	$bdd = connect_db();
+	session_start();
 
 	// on sécurise la variable $_GET
 	$chgt = htmlspecialchars($_GET['chgt']);
@@ -11,11 +12,20 @@
 			$annee = htmlspecialchars($_POST['annee_film']);
 			$score = htmlspecialchars($_POST['score_film']);
 
+			$req = $bdd->prepare('SELECT * FROM Movie WHERE Titre = ?');
+			$req->execute(array($titre));
+			if($film = $req->fetch()) {
+				$_SESSION['message'] = "Ce film existe déjà";
+				$req->closeCursor();
+				header("Location: ../../index.php");
+			} else {
+
 			$req = $bdd->prepare('INSERT INTO Movie (Titre, Année, Score, Votes) VALUES (?, ?, ?, 0)');
 			$req->execute(array($titre, $annee, $score));
 			$req->closeCursor();
-
+				$_SESSION['message'] = "Le film a bine été ajouté";
 			header('Location: ../../index.php');
+			}
 		}
 	} else if ($chgt == "suppression_film") {
 		$id_film = htmlspecialchars($_GET['id']);

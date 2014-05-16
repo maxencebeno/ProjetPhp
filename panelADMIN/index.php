@@ -55,6 +55,11 @@
 					</form> 
 					<?php
 						}
+						// Affichage du message de réussite ou d'erreur avec une variable de session (le plus pratique et sécurisé)
+						if(isset($_SESSION['message'])) {
+							echo '<p style="color: red;font-weight: bold">'.$_SESSION['message'].'</p>';
+							unset($_SESSION['message']); // Supprime le message si on rafraichit la page on ne l'affiche plus! 
+						}
 					?>
 				</div>
 				
