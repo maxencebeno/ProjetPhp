@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	require_once('../includes/db_connect.php');
 	$bdd = connect_db();
 ?>
@@ -13,47 +14,51 @@
 	<body>
 		<?php include('includes/header_admin.php'); ?>
 			<div id="wrapper">
-			<h1>MEGACINE</h1>
-			<article>
-				<p>Bienvenue sur la page d'administration du site. On y ajoute, supprime ou modifie les films présents.</p>
-			<article>
+				<h2 style="color: grey">Bienvenue sur la page d'administration du site. On y ajoute, supprime ou modifie les films présents.</h2>
 
+				<div id="ajout">
+					<h1>Ajouter des informations</h1>
+					<p><span style="color: #63b4fb;font-weight:bold;text-decoration:underline">Ajouter un acteur :</span> rendez-vous sur la page du film auquel il a participé. </p>
+					
+					<p style="color: #63b4fb;font-weight:bold;text-decoration:underline">Ajouter un film avec un fichier</p>
+					<form enctype="multipart/form-data" action="librairies/templates/template_fileupload.php" method="post">
+						<input type="hidden" name="MAX_FILE_SIZE" value="100000" />
+						<p style="margin-left: 30px">Choisissez un fichier .txt respectant les normes définies <input type="file" name="monfichier" required/>
+						<input type="submit" value="Envoyer"/></p>
+					</form>
+
+					<?php
+						// Affichage du message de réussite ou d'erreur avec une variable de session (le plus pratique et sécurisé)
+						if(isset($_SESSION['message'])) {
+							echo '<p style="color: red;font-weight: bold">'.$_SESSION['message'].'</p>';
+							unset($_SESSION['message']); // Supprime le message si on rafraichit la page on ne l'affiche plus! 
+						}
+					?>
+
+					<p style="color: #63b4fb;font-weight:bold;text-decoration:underline">Ajouter un film en remplissant le formulaire</p>
+
+					<?php if(!isset($_POST['ajout_film'])) { ?>
+					<form id="formulaire_film" method="post" action="index.php">
+						<p style="margin-left: 30px"><input type="submit" name="ajout_film" value="Ajouter un film"></p>
+					</form>
+				
+					<?php
+						}
+						if(isset($_POST['ajout_film'])) {
+					?>  
+					<form id="formulaire_film" method="post" action="librairies/templates/template_movie.php?chgt=ajout_film">
+						<p style="margin-left: 30px">
+							<input type="text" name="titre_film" placeholder="Titre" required>
+							<input type="text" name="annee_film" placeholder="Année" required>
+							<input type="text" name="score_film" placeholder="Score" required>
+							<input type="submit" value="Envoyer"></p>
+					</form> 
+					<?php
+						}
+					?>
+				</div>
+				
 				<h1>Liste des films</h1>
-
-				<p> Pour l'ajout d'un acteur : rendez-vous sur la page du film auquel il a participé. </p>
-
-				<form enctype="multipart/form-data" action="librairies/templates/template_fileupload.php" method="post">
-      				<input type="hidden" name="MAX_FILE_SIZE" value="100000" />
-      				Transfère le fichier <input type="file" name="monfichier" />
-      				<input type="submit" value="Envoyer"/>
-    			</form>
-
-    			<?php
-    				if(!empty($_GET['message'])) {
-    					$message = htmlspecialchars($_GET['message']);
-    					echo $message;
-    				}
-    			?>
-
-    			<p>Ou</p>
-
-				<form id="formulaire_film" method="post" action="index.php">
-					<input type="submit" name="ajout_film" value="Ajouter un film">
-				</form>
-			
-				<?php
-					if(isset($_POST['ajout_film'])) {
-				?>  
-				<form id="formulaire_film" method="post" action="librairies/templates/template_movie.php?chgt=ajout_film">
-					<input type="text" name="titre_film" placeholder="Titre" required>
-					<input type="text" name="annee_film" placeholder="Année" required>
-					<input type="text" name="score_film" placeholder="Score" required>
-					<input type="submit" value="Envoyer">
-				</form> 
-				<?php
-					}
-				?>
-
 			<table id="table-films">
 				<tr>
 					<th>Titre</th> 

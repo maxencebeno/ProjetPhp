@@ -168,6 +168,14 @@ a:visited{
 input:focus {
 	outline-style: none;
 }
+
+#ajout{
+	width: 960px;
+	border: 1px solid silver;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding: 20px;
+}
 /*---------------------------------------------------------------*/
 @font-face {
   font-family: 'Open Sans';

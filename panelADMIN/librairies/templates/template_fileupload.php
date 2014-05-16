@@ -1,7 +1,8 @@
 <?php
+ session_start();
  error_reporting(-1); 
-	require_once('../../../includes/db_connect.php');
-	$bdd = connect_db();
+ require_once('../../../includes/db_connect.php');
+ $bdd = connect_db();
 
 // On récupère le nom du fichier
 $nomOrigine = $_FILES['monfichier']['name'];
@@ -9,7 +10,8 @@ $elementsChemin = pathinfo($nomOrigine); // On récupère son extension
 $extensionFichier = $elementsChemin['extension'];
 $extensionsAutorisees = array("txt");
 if (!(in_array($extensionFichier, $extensionsAutorisees))) { // On vérifie que l'extension est bien celle attendue
-    echo "Le fichier n'a pas l'extension attendue";
+    $_SESSION['message']=  "Le fichier n'a pas l'extension attendue";
+    header("Location: ../../index.php");
 } else {    
     // Copie dans le repertoire du script avec son nom
     $repertoireDestination = "./Ajout_Film/";
@@ -23,16 +25,16 @@ if($fichier = fopen("Ajout_Film/".$nomOrigine,"r")) {
 	$annee = fgets($fichier);
 	$score = fgets($fichier);
 } else {
-	$message = "Erreur lors de l'ouverture du fichier";
-	header("Location: ../../index.php?message=".$message."");
+	$_SESSION['message'] = "Erreur lors de l'ouverture du fichier";
+	header("Location: ../../index.php");
 }
 	// On vérifie que le film n'existe pas déjà
 	$req = $bdd->prepare('SELECT * FROM Movie WHERE Titre = ?');
 	$req->execute(array($titre));
 if($film = $req->fetch()) {
-	$message = "Ce film existe déjà";
+	$_SESSION['message'] = "Ce film existe déjà";
 	$req->closeCursor();
-	header("Location: ../../index.php?message=".$message."");
+	header("Location: ../../index.php");
 } else {
 		
 	// On insère le film dans la BDD
@@ -83,8 +85,8 @@ if($film = $req->fetch()) {
 		$ordinal++;
 				
 		}
-		$message = "Tout s'est bien déroulé";
-		header("Location: ../../index.php?message=".$message."");
+		$_SESSION['message'] = "Le film a bien été ajouté !";
+		header("Location: ../../index.php");
 	}
 		 
 fclose($fichier);
