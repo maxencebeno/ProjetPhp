@@ -23,7 +23,7 @@
 			$req = $bdd->prepare('INSERT INTO Movie (Titre, Année, Score, Votes) VALUES (?, ?, ?, 0)');
 			$req->execute(array($titre, $annee, $score));
 			$req->closeCursor();
-				$_SESSION['message'] = "Le film a bine été ajouté";
+				$_SESSION['message'] = "Le film a bien été ajouté";
 			header('Location: ../../index.php');
 			}
 		}
