@@ -57,7 +57,9 @@
 						<input type="submit" value="Envoyer">
 					</form> 
 				<?php
-				echo $_GET['message'];
+				if(isset($_GET['message'])){
+					echo $_GET['message'];
+				}
 			}
 		?>
 
