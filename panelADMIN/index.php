@@ -36,16 +36,7 @@
 					?>
 
 					<p style="color: #63b4fb;font-weight:bold;text-decoration:underline">Ajouter un film en remplissant le formulaire</p>
-
-					<?php if(!isset($_POST['ajout_film'])) { ?>
-					<form id="formulaire_film" method="post" action="index.php">
-						<p style="margin-left: 30px"><input type="submit" name="ajout_film" value="Ajouter un film"></p>
-					</form>
-				
-					<?php
-						}
-						if(isset($_POST['ajout_film'])) {
-					?>  
+  
 					<form id="formulaire_film" method="post" action="librairies/templates/template_movie.php?chgt=ajout_film">
 						<p style="margin-left: 30px">
 							<input type="text" name="titre_film" placeholder="Titre" required>
@@ -53,9 +44,6 @@
 							<input type="text" name="score_film" placeholder="Score" required>
 							<input type="submit" value="Envoyer"></p>
 					</form> 
-					<?php
-						}
-					?>
 				</div>
 				
 				<h1>Liste des films</h1>
