@@ -1,7 +1,5 @@
 #profil_box{
 	width: 980px;
-	min-height: 300px;
-	border: 1px solid silver;
 	padding-left: 20px;
 	position: relative;
 }
@@ -9,7 +7,6 @@
 #main_box{
 	width: 800px;
 	position: relative;
-	height: 230px;
 	margin-bottom: 50px;
 }
 
@@ -71,7 +68,7 @@ h2{
 	border: 1px solid #63b4fb;
 }
 
-#submit{
+.submit{
 	width: 255px;
 	height: 40px;
 	border: 0;
@@ -89,11 +86,6 @@ input:focus {
 	outline-style: none;
 }
 
-#form_update{
-	text-align: center;
-	width: 100%;
-}
-
 h3{
-	text-align: center;
+	text-align: left;
 }
