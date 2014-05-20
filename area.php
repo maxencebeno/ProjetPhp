@@ -29,6 +29,8 @@
 				$req->closeCursor();
 			?>
 
+			<p><a href="feedbacks.php">Laisser un feedback</a></p>
+
 		<table id="table-films">
 			<tr>
 				<th>Titre</th> 

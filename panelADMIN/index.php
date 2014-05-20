@@ -64,6 +64,9 @@
 							unset($_SESSION['message']); // Supprime le message si on rafraichit la page on ne l'affiche plus! 
 						}
 					?>
+
+					<p style="color: #63b4fb;font-weight:bold;text-decoration:underline"><a href="feedbacks_admin.php">Gérer les feedbacks</a></p>
+  
 				</div>
 				
 				<h1>Liste des films</h1>
