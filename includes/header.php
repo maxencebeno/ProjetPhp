@@ -1,9 +1,4 @@
 ﻿<header>
-	<!--
-	<div class="pub">
-			<p style="text-align: center;">FULL PUB</p>
-	</div>
-	-->
 	<nav id="menu">
 		<ul>
 			<li><a href="index.php">Accueil</a></li>
