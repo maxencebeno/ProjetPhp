@@ -56,7 +56,7 @@
 					</form>
 					
 					<h3 style="margin-top: 70px">Modifier ma photo de profil</h3>
-					<form enctype="multipart/form-data" action="profil.php?update" method="post" target="control">
+					<form enctype="multipart/form-data" action="profil.php?update" method="post">
 						<input type="hidden" name="MAX_FILE_SIZE" value="100000" />
 						<p><input type="file" name="file" required/><br />
 						<input type="submit" value="Enregistrer" class="submit"/></p>
