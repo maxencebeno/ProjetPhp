@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 	session_start();
 	if(!isset($_SESSION['estConnecte'])){
 		header('Location: index.php');
@@ -55,10 +55,9 @@
 						<?php if(isset($succes_register)){echo '<p style="color: green;margin-top: 20px">'.$succes_register.'</p>';} ?>
 					</form>
 					
-					<h3 style="margin-top: 70px">Modifier ma photo de profil</h3>
+					<h3 style="margin-top: 70px">Modifier ma photo de profil (Taille max: 5mo)</h3>
 					<form enctype="multipart/form-data" action="profil.php?update" method="post">
-						<input type="hidden" name="MAX_FILE_SIZE" value="100000" />
-						<p><input type="file" name="file" required/><br />
+						<p><input type="file" name="file" required /><br />
 						<input type="submit" value="Enregistrer" class="submit"/></p>
 					</form>
 					<?php if(isset($image_personnalisee) AND $image_personnalisee==true){?>
