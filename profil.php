@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 	session_start();
 	if(!isset($_SESSION['estConnecte'])){
 		header('Location: index.php');
@@ -35,7 +35,7 @@
 					$req->closeCursor();
 					if(!isset($_GET['update'])){ 
 					?>
-					<div id="profil_pic"><img src="<?php if($image_personnalisee==true){echo $chemin_image.'" style="width:200px;height: 200px"'; }else{echo 'images/avatar.png"';}?> alt="profile_picture"/></div>
+					<div id="profil_pic" style="background-image: url('<?php if($image_personnalisee==true){echo $chemin_image;}else{echo 'images/avatar.png';}?>');background-size: contain;background-repeat:no-repeat;background-position: center center;"></div>
 					<div id="infos_box">
 						<p><span class="infos_box_label">Prénom:</span> <?php echo $_SESSION['prenom']; ?></p>
 						<p><span class="infos_box_label">Nom:</span> <?php echo $_SESSION['nom']; ?></p>
@@ -55,10 +55,9 @@
 						<?php if(isset($succes_register)){echo '<p style="color: green;margin-top: 20px">'.$succes_register.'</p>';} ?>
 					</form>
 					
-					<h3 style="margin-top: 70px">Modifier ma photo de profil</h3>
-					<form enctype="multipart/form-data" action="profil.php?update" method="post" target="control">
-						<input type="hidden" name="MAX_FILE_SIZE" value="100000" />
-						<p><input type="file" name="file" required/><br />
+					<h3 style="margin-top: 70px">Modifier ma photo de profil (Taille max: 5mo)</h3>
+					<form enctype="multipart/form-data" action="profil.php?update" method="post">
+						<p><input type="file" name="file" required /><br />
 						<input type="submit" value="Enregistrer" class="submit"/></p>
 					</form>
 					<?php if(isset($image_personnalisee) AND $image_personnalisee==true){?>

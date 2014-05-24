@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 Options +MultiViews
 AuthName "Negative ! Get out ! Position secured."
 AuthType Basic
 AuthUserFile "/panelADMIN/.htpasswd"
 Require valid-user
+=======
+﻿AuthName "Negative ! Get out ! Position secured."
+AuthType Basic
+AuthUserFile "/homez.322/mediamot/www/projetphp/panelADMIN/.htpasswd"
+Require valid-user
+Options +MultiViews
+>>>>>>> FETCH_HEAD
