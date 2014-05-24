@@ -1,1 +1,5 @@
 Options +MultiViews
+AuthName "Negative ! Get out ! Position secured."
+AuthType Basic
+AuthUserFile "/panelADMIN/.htpasswd"
+Require valid-user
