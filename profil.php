@@ -35,7 +35,7 @@
 					$req->closeCursor();
 					if(!isset($_GET['update'])){ 
 					?>
-					<div id="profil_pic" style="background-image: url('<?php if($image_personnalisee==true){echo $chemin_image;}else{echo 'images/avatar.png';}?>');background-size: contain;background-repeat:no-repeat;background-position: center center;"></div>
+					<div id="profil_pic" style="background-image: url('<?php if($image_personnalisee==true){echo $chemin_image;}else{echo 'images/avatar.png';}?>')"></div>
 					<div id="infos_box">
 						<p><span class="infos_box_label">Prénom:</span> <?php echo $_SESSION['prenom']; ?></p>
 						<p><span class="infos_box_label">Nom:</span> <?php echo $_SESSION['nom']; ?></p>
