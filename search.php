@@ -30,7 +30,7 @@
 				}
 				else{
 					// Si l'utilisateur a envoyé des données on délègue le traitement de la rechercher à la page incluse ci-dessous
-					include('librairies/templates/template_search.php');
+					include('src/templates/template_search.php');
 				}
 			?>
 		</div>

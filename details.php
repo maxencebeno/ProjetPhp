@@ -75,7 +75,7 @@
 			?>
 
 		<h1> Laisser un commentaire </h1>
-			<form method="post" action=<?php echo 'librairies/templates/template_comment.php?id='.$id_film.''; ?> >
+			<form method="post" action=<?php echo 'src/templates/template_comment.php?id='.$id_film.''; ?> >
 				<textarea type="text" name="message" placeholder="Votre commentaire..." id="textarea_comment" maxlength="1000" required></textarea><br />
 				<input type="submit" name="envoyer" value="Envoyer" id="submit_comment"> 
 			</form>

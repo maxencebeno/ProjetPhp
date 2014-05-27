@@ -1,6 +1,6 @@
 <?php 
 	require("includes/db_connect.php");
-	require("librairies/templates/template_register.php");
+	require("src/templates/template_register.php");
 	$bdd = connect_db();
 	require_once('includes/auto_login.php');
 	

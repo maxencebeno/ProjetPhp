@@ -6,7 +6,7 @@
 	require_once('includes/db_connect.php');
 	$bdd = connect_db();	
 	require_once('includes/auto_login.php');
-	require_once('librairies/templates/template_profil.php');
+	require_once('src/templates/template_profil.php');
 ?>
 <!DOCTYPE html>
 <html>

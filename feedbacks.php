@@ -20,7 +20,7 @@
 		<div id="wrapper">
 			
 		<h1> Laisser un avis sur le site (les bugs ou autres problèmes rencontrés) </h1>
-			<form method="post" action="librairies/templates/template_feedbacks.php">
+			<form method="post" action="src/templates/template_feedbacks.php">
 				<textarea type="text" name="message" placeholder="Votre feedback..." id="textarea_comment" maxlength="1000" required></textarea><br />
 				<input type="submit" name="envoyer" value="Envoyer" id="submit_comment"> 
 			</form>

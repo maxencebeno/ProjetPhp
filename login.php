@@ -26,7 +26,7 @@
 				if($_POST['auto_login']){
 					//-------------------------------------------------------------------------------------------------
 					//Création de la variable datr qui sera la log_key dans la base de données et datr dans les cookies
-					include('librairies/templates/generer.php');
+					include('src/templates/generer.php');
 					$datr = generer(30);
 					//-------------------------------------------------------------------------------------------------
 					
