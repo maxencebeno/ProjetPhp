@@ -16,7 +16,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<meta charset="UTF-8">
 	</head>
-	<body onload="document.getElementById('pseudo_login').focus();">
+	<body>
 		<?php include('includes/header.php'); ?>
 		<div id="wrapper">
 			<h1>MEGACINE</h1>

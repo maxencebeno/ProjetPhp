@@ -15,7 +15,7 @@
 		<link rel="stylesheet" href="css/style_search.css" type ="text/css" />
 		<title>MEGACINE</title>
 	</head>
-	<body onload="document.getElementById('query').focus();">
+	<body>
 		<?php include('includes/header.php'); ?>
 		<div id="wrapper">
 			<?php 
@@ -23,7 +23,7 @@
 			?>
 			<form method="GET" action="search" id="form_query">
 				<h1>Rechercher un film</h1>
-				<input type="text" name="q" id="query" minlength="2" maxlength="40" autocomplete="off" /><br />
+				<input type="text" name="q" id="query" minlength="2" maxlength="40" autocomplete="off" autofocus /><br />
 				<input type="submit" value="Rechercher" id="submit"/>
 			</form>
 			<?php

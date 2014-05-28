@@ -11,7 +11,7 @@
 				echo'<li><a href="create-account.php">Inscription</a></li>';
 				?>
 				<form method="post" action="login.php" id="form_login">
-					<input type="text" name="pseudo" placeholder="Pseudo" maxlength="20" id="pseudo_login" required />
+					<input type="text" name="pseudo" placeholder="Pseudo" maxlength="20" id="pseudo_login" autofocus required />
 					<input type="password" name="password" placeholder="Mot de passe" maxlength="40" id="password_login" required />
 					<input type="checkbox" name="auto_login" id="auto_login" checked="checked" />
 					<label for="auto_login" id="label_auto_login">Se souvenir de moi</label>
